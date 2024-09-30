@@ -72,6 +72,10 @@ function fetchJewelry() {
         });
 }
 
+document.getElementById("jewelryBtn").addEventListener("click", () => {
+    fetchJewelry();  // Fix for switching to jewelry
+});
+
 document.getElementById("clothesBtn").addEventListener("click", () => {
     fetch("https://fakestoreapi.com/products/category/women's%20clothing")
         .then(res => res.json())
